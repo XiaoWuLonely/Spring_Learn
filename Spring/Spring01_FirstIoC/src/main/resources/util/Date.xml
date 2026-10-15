@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    第三个 Spring 配置文件：演示「第三方类也能注册成 Bean」。
+
+    java.util.Date 是 JDK 自带的类，不是我们自己写的，
+    但只要写出全类名，Spring 照样可以通过它的无参构造方法创建对象并放进容器。
+-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!-- class 写全类名 java.util.Date，id 为 DateBean，容器启动时就 new 一个 Date 出来 -->
+    <bean id="DateBean" class="java.util.Date"></bean>
+</beans>

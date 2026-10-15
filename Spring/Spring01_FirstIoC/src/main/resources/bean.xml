@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    第二个 Spring 配置文件，用来演示：Spring 允许把 Bean 配置拆分到多个 XML 文件中。
+
+    在测试类里通过 new ClassPathXmlApplicationContext("spring.xml", "bean.xml", "util/Date.xml")
+    同时加载三个配置文件，这里的 Bean 也会被注册进同一个容器。
+    大型项目中按模块拆分配置文件就是这么做的。
+-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 这个 Bean 的 id 故意叫 Bean2（和类名 User 无关），说明 id 可以随意起名，获取时用它即可 -->
+    <bean class="bean.User" id="Bean2"></bean>
+</beans>

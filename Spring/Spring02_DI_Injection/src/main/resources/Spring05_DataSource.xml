@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                            http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!--配置util-->
+    <!--这样就可以复用数据库了-->
+    <util:properties id="prop">
+        <prop key="driver">jdbc.Driver</prop>
+        <prop key="url">jdbc:mysql://localhost:3306/mytest</prop>
+        <prop key="username">root</prop>
+        <prop key="password">mysql</prop>
+    </util:properties>
+
+    <bean id="ds1" class="jdbc.Steps5_MyDataSource1">
+        <property name="properties" ref="prop"></property>
+        <!--        <property name="properties">-->
+        <!--            <props>-->
+        <!--                &lt;!&ndash;数据源&ndash;&gt;-->
+        <!--                <prop key="driver">jdbc.Driver</prop>-->
+        <!--                <prop key="url">jdbc:mysql://localhost:3306/mytest</prop>-->
+        <!--                <prop key="usename">root</prop>-->
+        <!--                <prop key="password">mysql</prop>-->
+        <!--            </props>-->
+        <!--        </property>-->
+    </bean>
+    <bean id="ds2" class="jdbc.Steps5_MyDataSource2">
+        <property name="properties" ref="prop"></property>
+        <!--        <property name="properties">-->
+        <!--            <props>-->
+        <!--                &lt;!&ndash;数据源&ndash;&gt;-->
+        <!--                <prop key="driver">jdbc.Driver</prop>-->
+        <!--                <prop key="url">jdbc:mysql://localhost:3306/mytest</prop>-->
+        <!--                <prop key="usename">root</prop>-->
+        <!--                <prop key="password">mysql</prop>-->
+        <!--            </props>-->
+        <!--        </property>-->
+    </bean>
+</beans>

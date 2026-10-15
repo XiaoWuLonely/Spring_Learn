@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--配置dao-->
+    <bean id="userDaoBean" class="dao.UserDao"></bean>
+    <bean id="vipDaoBean" class="dao.VipDao"></bean>
+    <!--配置service-->
+    <bean id="userServiceBean" class="services.UserService">
+        <!--set注入-->
+        <!--调用set方法，需要配置property-->
+        <!--注意这里的命名规则为省区set后首字母小写-->
+        <property name="userDao" ref="userDaoBean"></property>
+        <property name="vipDao" ref="vipDaoBean"></property>
+    </bean>
+</beans>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="studentBean" class="bean.Steps3_Jilian_Student">
+        <!--简单类型Value-->
+        <property name="name" value="Wulong"></property>
+        <!--不是简单属性用ref-->
+        <property name="steps3JilianClass" ref="classBean"></property>
+        <!--  级联属性  -->
+        <property name="steps3JilianClass.name" value="汽修二班"></property>
+    </bean>
+    <bean id="classBean" class="bean.Steps3_Jilian_Class">
+<!--        <property name="name" value="Wulong"></property>-->
+    </bean>
+</beans>

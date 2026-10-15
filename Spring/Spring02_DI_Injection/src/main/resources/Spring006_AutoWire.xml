@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--自动装配-->
+    <!--根据名称注入-->
+    <bean id="steps006AutoWire" class="dao.Steps006_AutoWire"></bean>
+    <!--这里的set要与要注入的set一致名字去set后首字母小写-->
+    <bean id="steps006AutoWireService" class="services.Steps006_AutoWire_Service" autowire="byName"></bean>
+
+    <!--  正常装配  -->
+<!--        &lt;!&ndash;dao&ndash;&gt;-->
+<!--        <bean id="steps006AutoWire" class="dao.Steps006_AutoWire"></bean>-->
+<!--        &lt;!&ndash;service&ndash;&gt;-->
+<!--        <bean id="steps006AutoWireService" class="services.Steps006_AutoWire_Service">-->
+<!--            <property name="steps006AutoWire" ref="steps006AutoWire"></property>-->
+<!--        </bean>-->
+</beans>

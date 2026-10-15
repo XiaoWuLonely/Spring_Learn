@@ -1,0 +1,60 @@
+# ===== 构建产物 =====
+target/
+build/
+out/
+bin/
+*.class
+*.jar
+*.war
+*.ear
+
+# 但 Maven Wrapper 的 jar 要保留
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# ===== IDE 配置 =====
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.settings/
+.classpath
+.project
+.factorypath
+
+# ===== 日志 =====
+*.log
+logs/
+log/
+
+# ===== 本地配置（含密码，绝不能提交）=====
+application-local.properties
+application-local.yml
+application-local.yaml
+*-local.properties
+*-local.yml
+*.env
+.env.local
+
+# ===== 操作系统 =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== 临时文件 =====
+*.tmp
+*.bak
+*.swp
+*~
+
+# ===== 依赖目录（如果用 npm / yarn 前端）=====
+node_modules/
+dist/
+.next/
+.nuxt/
+
+# ===== 其他 =====
+*.pid
+*.seed

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="Spring04_Set_Array_Bean" class="bean.Steps4_Set_Array">
+        <property name="aiHaos">
+            <array>
+                <!--简单类型-->
+                <value>抽烟1</value>
+                <value>抽烟2</value>
+                <value>抽烟3</value>
+            </array>
+        </property>
+        <property name="women">
+            <!--复杂类型-->
+            <array>
+                <ref bean="w1"></ref>
+                <ref bean="w2"></ref>
+                <ref bean="w3"></ref>
+            </array>
+        </property>
+    </bean>
+
+    <bean id="w1" class="bean.Steps4_Set_Women">
+        <property name="women" value="销量"></property>
+    </bean>
+    <bean id="w2" class="bean.Steps4_Set_Women">
+        <property name="women" value="销量2"></property>
+    </bean>
+    <bean id="w3" class="bean.Steps4_Set_Women">
+        <property name="women" value="销量3"></property>
+    </bean>
+</beans>

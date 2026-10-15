@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Spring 的配置文件（XML 方式配置 Bean）。
+
+    <beans> 是根标签，xmlns/xsi:schemaLocation 声明了本文件遵循的 Spring beans 命名空间和约束，
+    有了它 IDE 才能对 <bean> 标签做提示和校验。
+-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--
+        注册一个 Bean：
+        - class：Bean 的全类名，Spring 通过它的无参构造方法反射创建对象；
+        - id：Bean 在容器中的唯一标识，代码里 getBean("userBean") 用的就是它；
+        - 不写 scope 时默认是 singleton（单例），容器启动时就创建好（饿汉式）。
+    -->
+    <bean class="bean.User" id="userBean"></bean>
+
+    <!-- 注册 DAO 实现类的 Bean，将来换别的数据库实现时只需改这里的 class -->
+    <bean class="dao.UserDaoImplForMysql" id="userDaoBean"></bean>
+
+</beans>
