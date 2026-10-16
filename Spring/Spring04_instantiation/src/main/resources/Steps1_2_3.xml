@@ -9,4 +9,10 @@
     <!-- Spring提供的实例化方式,第二种:通过简单工厂模式。你需要在Spring配置文件中告诉Spring框架,调用哪个类的哪个方法获取Bean -->
     <bean id="Steps2_Bean" class="Steps2_Start_Factory" factory-method="get"></bean>
 
+    <!-- Spring提供的实例化方式,第三种:通过工厂方法模式。通过 factory-bean属性+factory-method属性来共同完成。 -->
+    <!-- 告诉Spring框架,调用哪个对象的哪个方法来获取Bean。 -->
+    <bean id="Steps3_Bean" class="Steps3_Gun_Factory"></bean>
+    <!-- 以下的配置很关键,factory-bean属性告诉Spring调用哪个对象。factory-method告诉Spring调用该对象的哪个方法。 -->
+    <bean id="Steps3_Factory_Bean" factory-bean="Steps3_Bean" factory-method="get"></bean>
+
 </beans>
