@@ -1,4 +1,7 @@
-public class Steps1_User {
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.*;
+
+public class Steps1_User implements BeanNameAware, BeanClassLoaderAware, BeanFactoryAware, InitializingBean, DisposableBean {
 
     /**
      * * Bean的生命周期按照粗略的五步的话:
@@ -28,5 +31,30 @@ public class Steps1_User {
 
     public void destroyBean() {
         System.out.println("Five:Destroy Bean");
+    }
+
+    @Override
+    public void setBeanClassLoader(ClassLoader classLoader) {
+        System.out.println("Bean加载器");
+    }
+
+    @Override
+    public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
+        System.out.println("Bean工厂对象" + beanFactory);
+    }
+
+    @Override
+    public void setBeanName(String name) {
+        System.out.println("Bean名字是" + name);
+    }
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        System.out.println("InitializingBean's afterPropertiesSet执行");
+    }
+
+    @Override
+    public void destroy() throws Exception {
+        System.out.println("DisposableBean's destroy执行");
     }
 }
