@@ -15,4 +15,9 @@
     <!-- 以下的配置很关键,factory-bean属性告诉Spring调用哪个对象。factory-method告诉Spring调用该对象的哪个方法。 -->
     <bean id="Steps3_Factory_Bean" factory-bean="Steps3_Bean" factory-method="get"></bean>
 
+    <!-- Spring提供的实例化方式,第四种:通过FactoryBean接口来实现。 -->
+    <!-- 这种方式实际上就是第三种方式的简化。 -->
+    <!-- 由于你编写的类实现了FactoryBean接口,所以这个类是一个特殊的类,不需要你再手动指定:factory-bean、factory-method -->
+    <!-- 通过一个特殊的Bean:工厂Bean。来返回一个普通的Bean Person对象。 -->
+    <bean id="Steps4_Bean" class="Stpes4_Person_Factory"></bean>
 </beans>
