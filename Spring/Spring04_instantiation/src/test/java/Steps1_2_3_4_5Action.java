@@ -1,0 +1,17 @@
+import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Steps1_2_3_4_5Action {
+    @Test
+    public void Steps1_Action() {
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Steps1_2_3_4_5.xml");
+//        Steps1_SpringBean sb1 = applicationContext.getBean("Steps1_Bean", Steps1_SpringBean.class);
+//        Steps2_Start sb2 = applicationContext.getBean("Steps2_Bean", Steps2_Start.class);
+//        Steps3_Gun sb3 = applicationContext.getBean("Steps3_Factory_Bean", Steps3_Gun.class);
+//        Stpes4_Person sb4 = applicationContext.getBean("Steps4_Bean", Stpes4_Person.class);
+        Steps5_Student sb5 = applicationContext.getBean("Steps5_Bean", Steps5_Student.class);
+        System.out.println(sb5);
+    }
+
+}
