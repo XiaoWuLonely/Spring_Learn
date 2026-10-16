@@ -1,12 +1,12 @@
 import org.jspecify.annotations.Nullable;
 import org.springframework.beans.factory.FactoryBean;
 
-public class Stpes4_Person_Factory implements FactoryBean<Stpes4_Person> {
+public class Steps4_Person_Factory implements FactoryBean<Steps4_Person> {
     // PersonFactoryBean也是一个Bean。只不过这个Bean比较特殊。叫做工厂Bean。
 // 通过工厂Bean这个特殊的Bean可以获取一个普通的Bean。
     @Override
-    public @Nullable Stpes4_Person getObject() throws Exception {
-        return new Stpes4_Person();
+    public @Nullable Steps4_Person getObject() throws Exception {
+        return new Steps4_Person();
     }
 
     @Override
