@@ -1,0 +1,248 @@
+{
+  "main": {
+    "id": "9c2afeb53487bea5",
+    "type": "split",
+    "children": [
+      {
+        "id": "b2ad60893790ae58",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6980dea156b26207",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "README"
+            }
+          },
+          {
+            "id": "1e724ebbf9340be8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spring/Spring06_Circular_dependency_of_beans/Spring06_循环依赖_README.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Spring06_循环依赖_README"
+            }
+          }
+        ]
+      },
+      {
+        "id": "f82d3faec96c3f1c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a7dfda0445293a59",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e6af8bbe6f2c2790",
+    "type": "split",
+    "children": [
+      {
+        "id": "794d067e52021e23",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3a53b7b131487b65",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "96f018a5559322ea",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "716ff667a0e8bdba",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 257.5
+  },
+  "right": {
+    "id": "381598a511f4c8e3",
+    "type": "split",
+    "children": [
+      {
+        "id": "ab8573e34ee4b3f2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3aedfe4347dd85a7",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "反向链接"
+            }
+          },
+          {
+            "id": "3ba3597cd28db3ee",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "出链"
+            }
+          },
+          {
+            "id": "60c04ea30c56edce",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "a7a26a5b8578e3f9",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "346ebd7610804899",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "README.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false
+    }
+  },
+  "active": "6980dea156b26207",
+  "lastOpenFiles": [
+    "README.md",
+    "Spring/Spring06_Circular_dependency_of_beans/Spring06_循环依赖_README.md",
+    "Spring/Spring_README.md.tmp.1564.1792247704131",
+    "README.md.tmp.1564.1792247703994",
+    "Java_README.md",
+    "Spring/Spring_README.md",
+    "Spring/README.md",
+    "Spring/Spring03_Scope_Factory/Spring03_Bean作用域与工厂模式_README.md",
+    "Spring/Spring03_Scope_Factory/src/main/java/Factory/readme.md",
+    "Spring/Spring03_Scope_Factory/src/main/java/Easy_Factory/readme.md",
+    "Spring/README.md.tmp.1564.1792246621243",
+    "Java_README.md.tmp.1564.1792246611696",
+    "Java_README.md.tmp.1564.1792246611677",
+    "Java_README.md.tmp.1564.1792246611656",
+    "Java_README.md.tmp.1564.1792246611636",
+    "Java_README.md.tmp.1564.1792246611615",
+    "Java_README.md.tmp.1564.1792246611595",
+    "Java_README.md.tmp.1564.1792246611576",
+    "helloJava/helloJava_README.md",
+    "Spring/Spring05_LifeCycle/Spring05_生命周期_README.md",
+    "Spring/Spring04_instantiation/Spring04_Bean实例化方式_README.md",
+    "Spring/Spring02_DI_Injection/Spring02_依赖注入_README.md",
+    "Spring/Spring01_FirstIoC/Spring01_IoC容器入门_README.md",
+    "helloJava/README.md"
+  ]
+}

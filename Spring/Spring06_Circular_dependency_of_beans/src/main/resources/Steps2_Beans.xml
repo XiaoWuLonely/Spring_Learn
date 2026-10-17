@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 构造注入,这种循环依赖有没有问题 ?-->
+    <!-- 注意:基于构造注入的方式下产生的循环依赖也是无法解决的,所以编写代码时一定要注意。 -->
+    <bean id="Steps2_Husban_Bean" class="Steps2.Steps2_Husban" scope="singleton">
+        <constructor-arg index="0" value="WuLOng"></constructor-arg>
+        <constructor-arg index="1" ref="Steps2_Wife_Bean"></constructor-arg>
+    </bean>
+    <bean id="Steps2_Wife_Bean" class="Steps2.Steps2_Wife" scope="singleton">
+        <constructor-arg index="0" value="WuLOngLy"></constructor-arg>
+        <constructor-arg index="1" ref="Steps2_Husban_Bean"></constructor-arg>
+    </bean>
+</beans>
