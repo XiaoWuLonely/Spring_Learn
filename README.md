@@ -14,61 +14,38 @@
 
 ```
 Java/
-├── helloJava/                      # Java SE 基础语法练习
-└── Spring/                         # Spring 框架训练
-    ├── Spring01_FirstIoC/          # 第一个 Spring 程序：IoC 容器入门
-    ├── Spring02_DI_Injection/      # 依赖注入（DI）专题
-    └── Spring03_Scope_Factory/     # Bean 作用域 + 工厂模式
+├── helloJava/                                      # Java SE 基础语法练习
+└── Spring/                                         # Spring 框架训练（详见 Spring/Spring_README.md）
+    ├── Spring01_FirstIoC/                          # 第一个 Spring 程序：IoC 容器入门
+    ├── Spring02_DI_Injection/                      # 依赖注入（DI）专题
+    ├── Spring03_Scope_Factory/                     # Bean 作用域 + 工厂模式
+    ├── Spring04_instantiation/                     # Bean 实例化的四种方式
+    ├── Spring05_LifeCycle/                         # Bean 完整生命周期
+    └── Spring06_Circular_dependency_of_beans/      # Bean 循环依赖
 ```
 
-## 模块说明
+## 模块导航
 
-### helloJava —— Java SE 基础
+| 模块 | 简介 | 详细知识点 |
+|---|---|---|
+| **helloJava** | Java SE 基础：数据类型、流程控制、面向对象、异常、常用类 | → [helloJava_README.md](helloJava/helloJava_README.md) |
+| **Spring** | Spring 框架 6 个递进模块，从 IoC 到循环依赖 | → [Spring_README.md](Spring/Spring_README.md) |
+|  Spring01 | IoC 容器入门 | → [Spring01_IoC容器入门_README.md](Spring/Spring01_FirstIoC/Spring01_IoC容器入门_README.md) |
+|  Spring02 | 依赖注入专题 | → [Spring02_依赖注入_README.md](Spring/Spring02_DI_Injection/Spring02_依赖注入_README.md) |
+|  Spring03 | Bean 作用域 + 工厂模式 | → [Spring03_Bean作用域与工厂模式_README.md](Spring/Spring03_Scope_Factory/Spring03_Bean作用域与工厂模式_README.md) |
+|  Spring04 | Bean 实例化方式 | → [Spring04_Bean实例化方式_README.md](Spring/Spring04_instantiation/Spring04_Bean实例化方式_README.md) |
+|  Spring05 | Bean 生命周期 | → [Spring05_生命周期_README.md](Spring/Spring05_LifeCycle/Spring05_生命周期_README.md) |
+|  Spring06 | 循环依赖 | → [Spring06_循环依赖_README.md](Spring/Spring06_Circular_dependency_of_beans/Spring06_循环依赖_README.md) |
 
-Java 语法入门练习，按日期和章节组织：
+## 学习路线
 
-- `cs01/`：基础语法（数据类型、分支、循环、数组、方法、继承、多态、String、IO、日期）
-- `cs02/`：异常处理（try-catch、throws、自定义异常）、常用类（Math、Random、Date、Calendar、BigDecimal、BigInteger）
-- `cla/`、`zy/`、`MyStu/`：面向对象练习（封装、继承、多态、抽象类、接口、内部类）
-
-### Spring01_FirstIoC —— 第一个 Spring 程序
-
-Spring IoC 容器入门：
-
-- 启动 IoC 容器（`ClassPathXmlApplicationContext`）
-- XML 方式配置 Bean（`class` + `id`）
-- `getBean` 两种用法：按 id 获取 Object / 按 id + 类型获取
-- 同时加载多个配置文件（`spring.xml` / `bean.xml` / `util/Date.xml`）
-- 第三方类（`java.util.Date`）注册为 Bean
-- Log4j2 日志输出
-
-入口：`src/test/java/FirstSpring1.java`
-
-### Spring02_DI_Injection —— 依赖注入专题
-
-Spring DI（Dependency Injection）各种注入方式：
-
-| 配置文件 | 训练内容 |
-|---|---|
-| `spring1_set.xml` | set 方法注入 |
-| `spring2_constructor.xml` | 构造器注入（含简单类型） |
-| `spring03_jilian.xml` | 级联属性赋值 |
-| `Spring04_Set_Array.xml` | 数组 / 集合注入 |
-| `Spring05_DataSource.xml` | 内置数据源注入 |
-| `spring3_jdbc.xml` | 自定义数据源（Druid 风格模拟） |
-| `Spring006_AutoWire.xml` | 自动装配 byName |
-| `Steps007_AutoWare_Bytype.xml` | 自动装配 byType |
-| `Steps008_OutDataSource.xml` | 引入外部 properties 配置文件（`jdbc.properties`） |
-
-入口：`src/test/java/` 下对应的测试类
-
-### Spring03_Scope_Factory —— Bean 作用域 + 工厂模式
-
-- **Bean 作用域**：`singleton`（单例）与自定义 `threadScope`（`SimpleThreadScope` 注册自定义作用域）
-  - 配置：`src/main/resources/Steps1_Score.xml`
-  - 入口：`src/test/java/Steps1_Score_Action.java`
-- **简单工厂模式**（`Easy_Factory/`）：一个静态工厂方法根据类型生产所有产品；理解其违背 OCP（开闭原则）的问题
-- **工厂方法模式**（`Factory/`）：一种产品对应一个工厂，解决简单工厂的 OCP 与单一职责问题
+```
+helloJava（Java SE 基础）
+    ↓
+Spring01（IoC 容器）→ Spring02（DI 注入）→ Spring03（作用域 + 工厂）
+    ↓                                         ↓
+Spring04（实例化方式）→ Spring05（生命周期）→ Spring06（循环依赖）
+```
 
 ## 如何运行
 
@@ -77,15 +54,3 @@ Spring DI（Dependency Injection）各种注入方式：
 3. 运行 `src/test/java/` 下的 JUnit 测试类即可
 
 > `helloJava` 不是 Maven 项目，直接用 IDEA 打开后运行 `src/` 下各类的 `main` 方法。
-
-## 学习路线
-
-```
-helloJava（Java SE 基础）
-    ↓
-Spring01_FirstIoC（认识 IoC 容器，会配 Bean、会取 Bean）
-    ↓
-Spring02_DI_Injection（掌握各种依赖注入方式与自动装配）
-    ↓
-Spring03_Scope_Factory（理解 Bean 作用域，用工厂模式理解对象创建的设计思想）
-```
