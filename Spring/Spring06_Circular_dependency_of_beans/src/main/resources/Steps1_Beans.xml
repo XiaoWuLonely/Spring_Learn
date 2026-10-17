@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="Steps1_Husban_Bean" class="Steps1_Husban" scope="singleton">
+        <property name="name" value="WuLong"></property>
+        <property name="wife" ref="Steps1_Wife_Bean"></property>
+    </bean>
+    <bean id="Steps1_Wife_Bean" class="Steps1_Wife" scope="singleton">
+        <property name="name" value="WuLongly"></property>
+        <property name="husban" ref="Steps1_Husban_Bean"></property>
+    </bean>
+</beans>
