@@ -2,7 +2,7 @@
 
 > ← 返回总览：[Java_README.md](../README.md)
 
-基于 Spring Framework 7.0.0-M9，通过 6 个递进模块系统学习 Spring 核心概念。
+基于 Spring Framework 7.0.0-M9，通过 7 个递进模块系统学习 Spring 核心概念。
 
 ## 学习路线
 
@@ -18,6 +18,8 @@ Spring04_instantiation     → 掌握 Bean 实例化的四种方式，理解 Fac
 Spring05_LifeCycle         → 完整追踪 Bean 从创建到销毁的每个回调节点
     ↓
 Spring06_Circular_dependency → 理解循环依赖的本质及 Spring 三级缓存解决思路
+    ↓
+Spring07_Review_the_reflex → 回顾反射机制，理解 Spring IoC 底层原理的基础
 ```
 
 ## 模块速查
@@ -30,6 +32,7 @@ Spring06_Circular_dependency → 理解循环依赖的本质及 Spring 三级缓
 | Spring04_instantiation | 无参构造、静态工厂、实例工厂、`FactoryBean` | → [Spring04_Bean实例化方式_README.md](Spring04_instantiation/Spring04_Bean实例化方式_README.md) |
 | Spring05_LifeCycle | Aware 回调、BeanPostProcessor、init/destroy | → [Spring05_生命周期_README.md](Spring05_LifeCycle/Spring05_生命周期_README.md) |
 | Spring06_Circular_dependency | setter/构造器循环依赖、singleton/prototype、三级缓存 | → [Spring06_循环依赖_README.md](Spring06_Circular_dependency_of_beans/Spring06_循环依赖_README.md) |
+| Spring07_Review_the_reflex | `Class.forName`、`Method.invoke`、反射调用 setter | → [Spring07_反射机制_README.md](Spring07_Review_the_reflex/Spring07_反射机制_README.md) |
 
 ## 公共技术栈
 

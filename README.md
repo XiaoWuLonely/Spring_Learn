@@ -21,7 +21,8 @@ Java/
     ├── Spring03_Scope_Factory/                     # Bean 作用域 + 工厂模式
     ├── Spring04_instantiation/                     # Bean 实例化的四种方式
     ├── Spring05_LifeCycle/                         # Bean 完整生命周期
-    └── Spring06_Circular_dependency_of_beans/      # Bean 循环依赖
+    ├── Spring06_Circular_dependency_of_beans/      # Bean 循环依赖
+    └── Spring07_Review_the_reflex/                 # 反射机制回顾
 ```
 
 ## 模块导航
@@ -29,13 +30,14 @@ Java/
 | 模块 | 简介 | 详细知识点 |
 |---|---|---|
 | **helloJava** | Java SE 基础：数据类型、流程控制、面向对象、异常、常用类 | → [helloJava_README.md](helloJava/helloJava_README.md) |
-| **Spring** | Spring 框架 6 个递进模块，从 IoC 到循环依赖 | → [Spring_README.md](Spring/Spring_README.md) |
+| **Spring** | Spring 框架 7 个递进模块，从 IoC 到反射机制 | → [Spring_README.md](Spring/Spring_README.md) |
 |  Spring01 | IoC 容器入门 | → [Spring01_IoC容器入门_README.md](Spring/Spring01_FirstIoC/Spring01_IoC容器入门_README.md) |
 |  Spring02 | 依赖注入专题 | → [Spring02_依赖注入_README.md](Spring/Spring02_DI_Injection/Spring02_依赖注入_README.md) |
 |  Spring03 | Bean 作用域 + 工厂模式 | → [Spring03_Bean作用域与工厂模式_README.md](Spring/Spring03_Scope_Factory/Spring03_Bean作用域与工厂模式_README.md) |
 |  Spring04 | Bean 实例化方式 | → [Spring04_Bean实例化方式_README.md](Spring/Spring04_instantiation/Spring04_Bean实例化方式_README.md) |
 |  Spring05 | Bean 生命周期 | → [Spring05_生命周期_README.md](Spring/Spring05_LifeCycle/Spring05_生命周期_README.md) |
 |  Spring06 | 循环依赖 | → [Spring06_循环依赖_README.md](Spring/Spring06_Circular_dependency_of_beans/Spring06_循环依赖_README.md) |
+|  Spring07 | 反射机制回顾 | → [Spring07_反射机制_README.md](Spring/Spring07_Review_the_reflex/Spring07_反射机制_README.md) |
 
 ## 学习路线
 
@@ -44,7 +46,7 @@ helloJava（Java SE 基础）
     ↓
 Spring01（IoC 容器）→ Spring02（DI 注入）→ Spring03（作用域 + 工厂）
     ↓                                         ↓
-Spring04（实例化方式）→ Spring05（生命周期）→ Spring06（循环依赖）
+Spring04（实例化方式）→ Spring05（生命周期）→ Spring06（循环依赖）→ Spring07（反射机制）
 ```
 
 ## 如何运行
