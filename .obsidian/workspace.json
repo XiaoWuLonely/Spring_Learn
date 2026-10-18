@@ -20,20 +20,6 @@
               "icon": "lucide-file",
               "title": "README"
             }
-          },
-          {
-            "id": "1e724ebbf9340be8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spring/Spring06_Circular_dependency_of_beans/Spring06_循环依赖_README.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Spring06_循环依赖_README"
-            }
           }
         ]
       },
@@ -129,7 +115,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,7 +133,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -191,7 +175,6 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -218,31 +201,31 @@
       "bases:新建数据库": false
     }
   },
-  "active": "6980dea156b26207",
+  "active": "a7dfda0445293a59",
   "lastOpenFiles": [
     "README.md",
-    "Spring/Spring06_Circular_dependency_of_beans/Spring06_循环依赖_README.md",
-    "Spring/Spring_README.md.tmp.1564.1792247704131",
-    "README.md.tmp.1564.1792247703994",
-    "Java_README.md",
-    "Spring/Spring_README.md",
-    "Spring/README.md",
-    "Spring/Spring03_Scope_Factory/Spring03_Bean作用域与工厂模式_README.md",
-    "Spring/Spring03_Scope_Factory/src/main/java/Factory/readme.md",
-    "Spring/Spring03_Scope_Factory/src/main/java/Easy_Factory/readme.md",
-    "Spring/README.md.tmp.1564.1792246621243",
-    "Java_README.md.tmp.1564.1792246611696",
-    "Java_README.md.tmp.1564.1792246611677",
-    "Java_README.md.tmp.1564.1792246611656",
-    "Java_README.md.tmp.1564.1792246611636",
-    "Java_README.md.tmp.1564.1792246611615",
-    "Java_README.md.tmp.1564.1792246611595",
-    "Java_README.md.tmp.1564.1792246611576",
     "helloJava/helloJava_README.md",
+    "Spring/Spring_README.md",
+    "Spring/Spring06_Circular_dependency_of_beans/src/main/java/Steps2/Steps2_Wife.java",
+    "Spring/Spring06_Circular_dependency_of_beans/src/main/java/Steps2/Steps2_Husban.java",
+    "Spring/Spring06_Circular_dependency_of_beans/src/test/java/Steps2_Action.java",
+    "Spring/Spring06_Circular_dependency_of_beans/src/test/java/Steps1_Action.java",
+    "Spring/Spring06_Circular_dependency_of_beans/src/main/resources/Steps2_Beans.xml",
+    "Spring/Spring06_Circular_dependency_of_beans/src/main/resources/Steps1_Beans.xml",
+    "Spring/Spring06_Circular_dependency_of_beans/src/main/java/Steps2",
+    "Spring/Spring06_Circular_dependency_of_beans/src/main/java/Steps1_Wife.java",
+    "Spring/Spring06_Circular_dependency_of_beans/src/main/java/Steps1_Husban.java",
+    "Spring/Spring06_Circular_dependency_of_beans/src/test/java",
+    "Spring/Spring06_Circular_dependency_of_beans/Spring06_循环依赖_README.md",
     "Spring/Spring05_LifeCycle/Spring05_生命周期_README.md",
     "Spring/Spring04_instantiation/Spring04_Bean实例化方式_README.md",
+    "Spring/Spring03_Scope_Factory/Spring03_Bean作用域与工厂模式_README.md",
     "Spring/Spring02_DI_Injection/Spring02_依赖注入_README.md",
     "Spring/Spring01_FirstIoC/Spring01_IoC容器入门_README.md",
+    "Spring/Spring03_Scope_Factory/src/main/java/Factory/readme.md",
+    "Spring/Spring03_Scope_Factory/src/main/java/Easy_Factory/readme.md",
+    "Java_README.md",
+    "Spring/README.md",
     "helloJava/README.md"
   ]
 }
