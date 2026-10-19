@@ -10,6 +10,8 @@ import org.slf4j.LoggerFactory;
 
 import java.io.InputStream;
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -52,16 +54,45 @@ public class ClassPathXmlAplicationContext implements ApplicationContext {
                     Object bean = declaredConstructor.newInstance();
                     //将Bean曝光,加入Map
                     singletionObject.put(id, bean);
-                    //记录日子
+                    //记录日志
                     logger.info(singletionObject.toString());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             });
+            //再次遍历bean标签，目的是给Bean赋值
+            nodes.forEach(node -> {
+                try {
+                    Element beanElt = (Element) node;
+                    String id = beanElt.attributeValue("id");
+                    String className = beanElt.attributeValue("class");
+                    Class<?> aClass = Class.forName(className);
+                    //获取bean标签所有属性，比如property
+                    List<Element> propertys = beanElt.elements("property");
+                    propertys.forEach(property -> {
+                        try {
+                            //获取属性名
+                            String propertyName = property.attributeValue("name");
+                            logger.info("propertyName = " + propertyName);
+                            //获取属性类型
+                            Field field = aClass.getDeclaredField(propertyName);
+                            //获得Set方法名字
+                            String setMethodName = "set" + propertyName.toUpperCase().charAt(0) + propertyName.substring(1);
+                            //获取Set方法
+                            Method setMethod = aClass.getDeclaredMethod(setMethodName, field.getType());
+                            //调用Set方法
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    });
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+            });
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
     @Override
