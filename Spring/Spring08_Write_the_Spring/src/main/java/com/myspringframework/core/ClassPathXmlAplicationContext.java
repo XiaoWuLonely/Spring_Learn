@@ -78,9 +78,21 @@ public class ClassPathXmlAplicationContext implements ApplicationContext {
                             Field field = aClass.getDeclaredField(propertyName);
                             //获得Set方法名字
                             String setMethodName = "set" + propertyName.toUpperCase().charAt(0) + propertyName.substring(1);
-                            //获取Set方法
+                            //获取Set方法,动态根据方法名+类型获得
                             Method setMethod = aClass.getDeclaredMethod(setMethodName, field.getType());
-                            //调用Set方法
+                            //获取具体的值
+                            String value = property.attributeValue("value");
+                            String ref = property.attributeValue("ref");
+                            if (value != null) {
+                                //简单类型
+                                //调用Set方法
+                                setMethod.invoke(singletionObject.get(id), );
+                            } if (ref != null) {
+                                //复杂类型
+                                //调用Set方法
+                                setMethod.invoke(singletionObject.get(id), singletionObject.get(ref));
+                            }
+
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
