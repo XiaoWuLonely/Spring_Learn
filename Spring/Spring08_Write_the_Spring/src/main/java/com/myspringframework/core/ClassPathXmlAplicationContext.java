@@ -1,5 +1,6 @@
 package com.myspringframework.core;
 
+import org.apache.commons.beanutils.ConvertUtils;
 import org.dom4j.Attribute;
 import org.dom4j.Document;
 import org.dom4j.Element;
@@ -36,6 +37,7 @@ public class ClassPathXmlAplicationContext implements ApplicationContext {
             Document document = reader.read(resourceAsStream);
             //获取所有bean标签
             List<Node> nodes = document.selectNodes("//bean");
+            System.out.println("进行第一次遍历：传入Map对象");
             nodes.forEach(node -> {
                 try {
                     //向下转型使用Element结构更加丰富的方法
@@ -60,6 +62,7 @@ public class ClassPathXmlAplicationContext implements ApplicationContext {
                     e.printStackTrace();
                 }
             });
+            System.out.println("进行第二次遍历：获取property");
             //再次遍历bean标签，目的是给Bean赋值
             nodes.forEach(node -> {
                 try {
@@ -85,9 +88,12 @@ public class ClassPathXmlAplicationContext implements ApplicationContext {
                             String ref = property.attributeValue("ref");
                             if (value != null) {
                                 //简单类型
+                                //此处利用了commons-beanutils工具做输入类型转换成目标类型
+                                Object convertedValue = ConvertUtils.convert(value, field.getType());
                                 //调用Set方法
-                                setMethod.invoke(singletionObject.get(id), );
-                            } if (ref != null) {
+                                setMethod.invoke(singletionObject.get(id), convertedValue);
+                            }
+                            if (ref != null) {
                                 //复杂类型
                                 //调用Set方法
                                 setMethod.invoke(singletionObject.get(id), singletionObject.get(ref));
