@@ -1,3 +1,5 @@
+package annotation;
+
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -20,11 +22,11 @@ public @interface Component {
     // String是属性类型
     // value是属性名
     String value();
+
     // 其他的属性
     // 属性类型String
     // 属性名是name
     //String name();
-
     // 数组属性
     // 属性类型是:String[]
     // 属性名:names
