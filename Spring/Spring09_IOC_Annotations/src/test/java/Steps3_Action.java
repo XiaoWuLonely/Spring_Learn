@@ -2,6 +2,7 @@ import bean.Steps3_Order;
 import bean.Steps3_Student;
 import bean.Steps3_User;
 import bean.Steps3_Vip;
+import dao.Steps4_OtherBean;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -19,5 +20,9 @@ public class Steps3_Action {
         System.out.println(studentBean);
         System.out.println(userBean);
         System.out.println(vipBean);
+
+        //other Bean
+        Steps4_OtherBean steps4OtherBean = applicationContext.getBean("steps4_OtherBean", Steps4_OtherBean.class);
+        System.out.println(steps4OtherBean);
     }
 }
