@@ -5,6 +5,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
+import java.util.List;
+
 public class Steps1_Action {
     @Test
     public void Steps1() {
@@ -42,6 +44,15 @@ public class Steps1_Action {
         JdbcTemplate jdbcTemeplate = applicationContext.getBean("jdbcTemeplate", JdbcTemplate.class);
         String InsertSQL = "select  id,real_name,age from Steps1_User where id = ?";
         Steps1_User steps1User = jdbcTemeplate.queryForObject(InsertSQL, new BeanPropertyRowMapper<>(Steps1_User.class), 3);
+        System.out.println(steps1User);
+    }
+
+    @Test
+    public void Steps1_SelectAll() {
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Steps1.xml");
+        JdbcTemplate jdbcTemeplate = applicationContext.getBean("jdbcTemeplate", JdbcTemplate.class);
+        String InsertSQL = "select  id,real_name,age from Steps1_User";
+        List<Steps1_User> steps1User = jdbcTemeplate.query(InsertSQL, new BeanPropertyRowMapper<>(Steps1_User.class));
         System.out.println(steps1User);
     }
 }
