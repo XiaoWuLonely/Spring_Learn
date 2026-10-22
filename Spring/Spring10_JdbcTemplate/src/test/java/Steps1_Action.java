@@ -120,4 +120,22 @@ public class Steps1_Action {
         int[] ints = jdbcTemeplate.batchUpdate(InsertSQL, batchArgs);
         System.out.println(Arrays.toString(ints));
     }
+
+
+    @Test
+    //批量删除
+    public void Steps1_BatchDelete() {
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Steps1.xml");
+        JdbcTemplate jdbcTemeplate = applicationContext.getBean("jdbcTemeplate", JdbcTemplate.class);
+        String InsertSQL = "delete from Steps1_User where id =? ";
+        // 创建一个 List 来装所有的 Object 数组
+        List<Object[]> batchArgs = new ArrayList<>();
+        // 依次修改名字和年龄
+        for (int i = 1; i <= 10; i++) {
+            // 注意：这里只有一个元素了！
+            batchArgs.add(new Object[]{i});
+        }
+        int[] ints = jdbcTemeplate.batchUpdate(InsertSQL, batchArgs);
+        System.out.println(Arrays.toString(ints));
+    }
 }
