@@ -1,6 +1,8 @@
+import bean.Steps1_User;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 public class Steps1_Action {
@@ -32,5 +34,14 @@ public class Steps1_Action {
         String InsertSQL = "delete from Steps1_User where  id  = ?";
         int count = jdbcTemeplate.update(InsertSQL, 7);
         System.out.println(count);
+    }
+
+    @Test
+    public void Steps1_Select() {
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Steps1.xml");
+        JdbcTemplate jdbcTemeplate = applicationContext.getBean("jdbcTemeplate", JdbcTemplate.class);
+        String InsertSQL = "select  id,real_name,age from Steps1_User where id = ?";
+        Steps1_User steps1User = jdbcTemeplate.queryForObject(InsertSQL, new BeanPropertyRowMapper<>(Steps1_User.class), 3);
+        System.out.println(steps1User);
     }
 }
