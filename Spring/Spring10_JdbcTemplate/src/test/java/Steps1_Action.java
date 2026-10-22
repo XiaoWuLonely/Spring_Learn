@@ -94,4 +94,30 @@ public class Steps1_Action {
         int[] ints = jdbcTemeplate.batchUpdate(InsertSQL, batchArgs);
         System.out.println(Arrays.toString(ints));
     }
+
+    @Test
+    //批量修改
+    public void Steps1_BatchUpdate() {
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Steps1.xml");
+        JdbcTemplate jdbcTemeplate = applicationContext.getBean("jdbcTemeplate", JdbcTemplate.class);
+        String InsertSQL = "update Steps1_User set real_name=?,age=? where id =? ";
+
+        // 创建一个 List 来装所有的 Object 数组
+        List<Object[]> batchArgs = new ArrayList<>();
+        // 依次修改名字和年龄
+        batchArgs.add(new Object[]{"新李四", 26, 10});
+        batchArgs.add(new Object[]{"新王五", 29, 11});
+        batchArgs.add(new Object[]{"新赵六", 31, 12});
+        batchArgs.add(new Object[]{"新Alice", 19, 13});
+        batchArgs.add(new Object[]{"新Bob", 36, 14});
+        batchArgs.add(new Object[]{"张三", 22, 15});
+        batchArgs.add(new Object[]{"李四", 25, 16});
+        batchArgs.add(new Object[]{"王五", 28, 17});
+        batchArgs.add(new Object[]{"赵六", 30, 18});
+        batchArgs.add(new Object[]{"Alice", 18, 19});
+        batchArgs.add(new Object[]{"Bob", 35, 20});
+
+        int[] ints = jdbcTemeplate.batchUpdate(InsertSQL, batchArgs);
+        System.out.println(Arrays.toString(ints));
+    }
 }
