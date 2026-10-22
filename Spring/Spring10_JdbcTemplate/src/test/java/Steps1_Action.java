@@ -5,10 +5,14 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Steps1_Action {
     @Test
+    //添加
     public void Steps1() {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Steps1.xml");
         JdbcTemplate jdbcTemeplate = applicationContext.getBean("jdbcTemeplate", JdbcTemplate.class);
@@ -21,6 +25,7 @@ public class Steps1_Action {
     }
 
     @Test
+    //修改
     public void Steps1_Alter() {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Steps1.xml");
         JdbcTemplate jdbcTemeplate = applicationContext.getBean("jdbcTemeplate", JdbcTemplate.class);
@@ -30,6 +35,7 @@ public class Steps1_Action {
     }
 
     @Test
+    //删除
     public void Steps1_Delete() {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Steps1.xml");
         JdbcTemplate jdbcTemeplate = applicationContext.getBean("jdbcTemeplate", JdbcTemplate.class);
@@ -39,6 +45,7 @@ public class Steps1_Action {
     }
 
     @Test
+    //查询单个数据
     public void Steps1_Select() {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Steps1.xml");
         JdbcTemplate jdbcTemeplate = applicationContext.getBean("jdbcTemeplate", JdbcTemplate.class);
@@ -48,6 +55,7 @@ public class Steps1_Action {
     }
 
     @Test
+    //查询多条数据
     public void Steps1_SelectAll() {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Steps1.xml");
         JdbcTemplate jdbcTemeplate = applicationContext.getBean("jdbcTemeplate", JdbcTemplate.class);
@@ -57,11 +65,33 @@ public class Steps1_Action {
     }
 
     @Test
+    //查询某个值
     public void Steps1_SelectValue() {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Steps1.xml");
         JdbcTemplate jdbcTemeplate = applicationContext.getBean("jdbcTemeplate", JdbcTemplate.class);
         String InsertSQL = "select count(1) from Steps1_User";
-        Integer steps1User = jdbcTemeplate.queryForObject(InsertSQL,int.class);
+        Integer steps1User = jdbcTemeplate.queryForObject(InsertSQL, int.class);
         System.out.println(steps1User);
+    }
+
+    @Test
+    //批量添加
+    public void Steps1_BatchInsert() {
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Steps1.xml");
+        JdbcTemplate jdbcTemeplate = applicationContext.getBean("jdbcTemeplate", JdbcTemplate.class);
+        String InsertSQL = "insert  into Steps1_User(real_name,age) values(?,?) ";
+
+        // 创建一个 List 来装所有的 Object 数组
+        List<Object[]> batchArgs = new ArrayList<>();
+        // 依次添加名字和年龄
+        batchArgs.add(new Object[]{"张三", 22});
+        batchArgs.add(new Object[]{"李四", 25});
+        batchArgs.add(new Object[]{"王五", 28});
+        batchArgs.add(new Object[]{"赵六", 30});
+        batchArgs.add(new Object[]{"Alice", 18});
+        batchArgs.add(new Object[]{"Bob", 35});
+
+        int[] ints = jdbcTemeplate.batchUpdate(InsertSQL, batchArgs);
+        System.out.println(Arrays.toString(ints));
     }
 }
