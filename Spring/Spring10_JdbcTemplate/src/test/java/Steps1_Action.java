@@ -15,4 +15,22 @@ public class Steps1_Action {
         int count = jdbcTemeplate.update(InsertSQL, "WuLong", 22);
         System.out.println(count);
     }
+
+    @Test
+    public void Steps1_Alter() {
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Steps1.xml");
+        JdbcTemplate jdbcTemeplate = applicationContext.getBean("jdbcTemeplate", JdbcTemplate.class);
+        String InsertSQL = "update Steps1_User set real_name = ?,age= ? where  id  = ?";
+        int count = jdbcTemeplate.update(InsertSQL, "WuLong", 10086, 8);
+        System.out.println(count);
+    }
+
+    @Test
+    public void Steps1_Delete() {
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Steps1.xml");
+        JdbcTemplate jdbcTemeplate = applicationContext.getBean("jdbcTemeplate", JdbcTemplate.class);
+        String InsertSQL = "delete from Steps1_User where  id  = ?";
+        int count = jdbcTemeplate.update(InsertSQL, 7);
+        System.out.println(count);
+    }
 }
