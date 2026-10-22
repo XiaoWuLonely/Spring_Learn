@@ -55,4 +55,13 @@ public class Steps1_Action {
         List<Steps1_User> steps1User = jdbcTemeplate.query(InsertSQL, new BeanPropertyRowMapper<>(Steps1_User.class));
         System.out.println(steps1User);
     }
+
+    @Test
+    public void Steps1_SelectValue() {
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Steps1.xml");
+        JdbcTemplate jdbcTemeplate = applicationContext.getBean("jdbcTemeplate", JdbcTemplate.class);
+        String InsertSQL = "select count(1) from Steps1_User";
+        Integer steps1User = jdbcTemeplate.queryForObject(InsertSQL,int.class);
+        System.out.println(steps1User);
+    }
 }
