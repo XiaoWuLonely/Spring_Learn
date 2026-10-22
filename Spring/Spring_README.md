@@ -2,7 +2,7 @@
 
 > ← 返回总览：[Java_README.md](../README.md)
 
-基于 Spring Framework 7.0.0-M9，通过 9 个递进模块系统学习 Spring 核心概念。
+基于 Spring Framework 7.0.0-M9，通过 10 个递进模块系统学习 Spring 核心概念。
 
 ## 学习路线
 
@@ -24,6 +24,8 @@ Spring07_Review_the_reflex → 回顾反射机制，理解 Spring IoC 底层原�
 Spring08_Write_the_Spring  → 从零手写迷你 Spring IoC 容器，融会贯通
     ↓
 Spring09_IOC_Annotations   → 掌握 Spring IoC 注解驱动开发
+    ↓
+Spring10_JdbcTemplate      → 使用 JdbcTemplate 简化数据库操作
 ```
 
 ## 模块速查
@@ -39,6 +41,7 @@ Spring09_IOC_Annotations   → 掌握 Spring IoC 注解驱动开发
 | Spring07_Review_the_reflex | `Class.forName`、`Method.invoke`、反射调用 setter | → [Spring07_反射机制_README.md](Spring07_Review_the_reflex/Spring07_反射机制_README.md) |
 | Spring08_Write_the_Spring | dom4j 解析 XML、反射实例化、两遍遍历注入属性 | → [Spring08_手写Spring_README.md](Spring08_Write_the_Spring/Spring08_手写Spring_README.md) |
 | Spring09_IOC_Annotations | 自定义注解、包扫描、@Component/@Service/@Autowired/@Resource、纯注解配置 | → [Spring09_IoC注解_README.md](Spring09_IOC_Annotations/Spring09_IoC注解_README.md) |
+| Spring10_JdbcTemplate | 数据源配置、JdbcTemplate CRUD、德鲁伊连接池、BeanPropertyRowMapper | → [Spring10_JdbcTemplate_README.md](Spring10_JdbcTemplate/Spring10_JdbcTemplate_README.md) |
 
 ## 公共技术栈
 
