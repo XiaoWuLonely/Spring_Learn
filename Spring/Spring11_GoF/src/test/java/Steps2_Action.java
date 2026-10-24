@@ -1,6 +1,7 @@
 import Steps2.service.Steps2_OrderService;
-import Steps2.service.impl.InvocationHandler;
-import Steps2.service.impl.Steps2_OrderServiceImpl;
+import Steps2.impl.InvocationHandler;
+import Steps2.impl.Steps2_OrderServiceImpl;
+import Steps2.util.Steps2_ProxyUtil;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Proxy;
@@ -38,7 +39,7 @@ public class Steps2_Action {
          * 因为这种调用处理器写一次就好。
          * 注意:代理对象和目标对象实现的接口一样,所以可以向下转型。
          **/
-        Steps2_OrderService ProxyObj = (Steps2_OrderService) Proxy.newProxyInstance(target.getClass().getClassLoader(), target.getClass().getInterfaces(), new InvocationHandler(target));
+        Steps2_OrderService ProxyObj = (Steps2_OrderService) Steps2_ProxyUtil.newProxyInstance(target);
         ProxyObj.generate();
         ProxyObj.modify();
         ProxyObj.detail();
