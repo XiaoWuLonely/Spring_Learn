@@ -1,6 +1,6 @@
-package service;
+package Steps2.service;
 
-public interface Steps1_OrderService  {
+public interface Steps2_OrderService {
 
     void generate();
     void modify();

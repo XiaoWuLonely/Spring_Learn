@@ -1,8 +1,7 @@
 import org.junit.jupiter.api.Test;
-import service.Steps1_OrderService;
-import service.impl.Steps1_OrderServiceImpl;
-import service.impl.Steps1_OrderServiceImplSub;
-import service.impl.Steps1_OrderServiceProxy;
+import Steps1.service.Steps1_OrderService;
+import Steps1.service.impl.Steps1_OrderServiceImpl;
+import Steps1.service.impl.Steps1_OrderServiceProxy;
 
 public class Steps1_Action {
 
