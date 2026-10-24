@@ -38,7 +38,7 @@ public class Steps2_Action {
          * 因为这种调用处理器写一次就好。
          * 注意:代理对象和目标对象实现的接口一样,所以可以向下转型。
          **/
-        Steps2_OrderService ProxyObj = (Steps2_OrderService) Proxy.newProxyInstance(target.getClass().getClassLoader(), target.getClass().getInterfaces(), new InvocationHandler());
+        Steps2_OrderService ProxyObj = (Steps2_OrderService) Proxy.newProxyInstance(target.getClass().getClassLoader(), target.getClass().getInterfaces(), new InvocationHandler(target));
         ProxyObj.generate();
     }
 }
