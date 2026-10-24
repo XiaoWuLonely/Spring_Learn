@@ -1,6 +1,6 @@
 package Steps2.util;
 
-import Steps2.impl.InvocationHandler;
+import Steps2.service.impl.InvocationHandler;
 
 import java.lang.reflect.Proxy;
 
