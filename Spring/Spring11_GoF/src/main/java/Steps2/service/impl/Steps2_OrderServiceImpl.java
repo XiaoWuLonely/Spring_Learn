@@ -3,6 +3,11 @@ package Steps2.service.impl;
 import Steps2.service.Steps2_OrderService;
 
 public class  Steps2_OrderServiceImpl implements Steps2_OrderService {
+    @Override
+    public String getName() {
+        System.out.println("getName");
+        return "张三";
+    }
 
     @Override
     public void generate() {

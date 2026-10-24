@@ -40,5 +40,9 @@ public class Steps2_Action {
          **/
         Steps2_OrderService ProxyObj = (Steps2_OrderService) Proxy.newProxyInstance(target.getClass().getClassLoader(), target.getClass().getInterfaces(), new InvocationHandler(target));
         ProxyObj.generate();
+        ProxyObj.modify();
+        ProxyObj.detail();
+        String name = ProxyObj.getName();
+        System.out.println(name);
     }
 }

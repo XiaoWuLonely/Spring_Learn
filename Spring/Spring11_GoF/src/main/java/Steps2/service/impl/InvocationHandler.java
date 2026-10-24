@@ -29,10 +29,14 @@ public class InvocationHandler implements java.lang.reflect.InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         //写增强代码
-        System.out.println("invoke");
+//        System.out.println("invoke");
         //调用没目标方法
+        long begin = System.currentTimeMillis();
         Object invoke = method.invoke(target, args);
-        System.out.println(invoke);
-        return null;
+        long end = System.currentTimeMillis();
+        System.out.println(end - begin + "ms");
+
+        // 注意这个invoke方法的返回值,如果代理对象调用代理方法之后,需要返回结果的话,invoke方法必须将目标对象的目标方法执行结果继续返回。
+        return invoke;
     }
 }
