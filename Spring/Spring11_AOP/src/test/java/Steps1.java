@@ -14,6 +14,5 @@ public class Steps1 {
 
         Steps1_OrderService steps1OrderService = applicationContext.getBean("steps1_OrderService", Steps1_OrderService.class);
         steps1OrderService.generate();
-
     }
 }
