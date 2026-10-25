@@ -5,8 +5,10 @@ import Steps1.pojo.Account;
 import Steps1.service.AccountService;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Transactional
 public class AccountServiceImpl implements AccountService {
     @Resource(name = "accountDaoImpl")
     private AccountDao accountDao;
@@ -22,11 +24,10 @@ public class AccountServiceImpl implements AccountService {
         fromAct.setBalance(fromAct.getBalance() - money);
         toAct.setBalance(toAct.getBalance() + money);
 
-        String s  =null;
-        s.toString();
+//        String s  =null;
+//        s.toString();
         //保存
         int updated = accountDao.update(fromAct);
-        System.out.println(updated);
         updated += accountDao.update(toAct);
         if (updated != 2) {
             throw new RuntimeException("失败了");
