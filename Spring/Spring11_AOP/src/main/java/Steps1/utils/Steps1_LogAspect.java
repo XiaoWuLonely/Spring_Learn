@@ -1,12 +1,14 @@
-package Steps1.service;
+package Steps1.utils;
 
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 @Component
 @Aspect
+@Order(2)
 public class Steps1_LogAspect {
     // 切面=通知 + 切点
     // 通知就是增强,就是具体的要编写的增强代码
