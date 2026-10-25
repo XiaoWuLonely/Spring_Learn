@@ -1,6 +1,7 @@
 package Steps1.utils;
 
 
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.core.annotation.Order;
@@ -20,8 +21,10 @@ public class Steps1_LogAspect {
     //@Before("execution(* Steps1.service.Steps1_UserService.login(..))")
     //@Before("execution(* Steps1.service.Steps1_UserService.*(..))")
     @Before("通用()")
-    public void add() {
+    public void add(JoinPoint joinPoint) {
         System.out.println("疯狂水世界启动(前置)");
+        //可以通过JoinPoint joinPoint获得方法签名
+        System.out.println(joinPoint.getSignature().getName());
     }
 
     //后置
