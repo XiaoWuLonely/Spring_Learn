@@ -7,4 +7,7 @@ public class Steps1_UserService {
     public void login() {
         System.out.println("Login~~");
     }
+    public void logout(){
+        System.out.println("Logout~~");
+    }
 }
