@@ -30,7 +30,11 @@ public class Steps2 {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Steps2.xml");
         Steps2_IsolationService2 steps2IsolationService2 = applicationContext.getBean("steps2_IsolationService2", Steps2_IsolationService2.class);
         Steps2_Account steps2Account = new Steps2_Account("act-003", 5000);
-        steps2IsolationService2.save(steps2Account);
+        try {
+            steps2IsolationService2.save(steps2Account);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
 }
