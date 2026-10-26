@@ -9,4 +9,7 @@ public interface AccountDao {
 
     //更新账户
     int update(Account account);
+
+    //保存
+    int insert(String actno,double money);
 }

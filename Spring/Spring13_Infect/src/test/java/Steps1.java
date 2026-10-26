@@ -12,8 +12,10 @@ public class Steps1 {
         try {
             accountService.transfer("act-001", "act-002", 1);
             System.out.println("转账成功");
+            accountService.save("act-003",2000);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
 }

@@ -5,6 +5,7 @@ import Steps1.pojo.Account;
 import Steps1.service.AccountService;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
@@ -31,6 +32,23 @@ public class AccountServiceImpl implements AccountService {
         updated += accountDao.update(toAct);
         if (updated != 2) {
             throw new RuntimeException("失败了");
+        }
+    }
+
+    @Resource(name = "accountServiceImpl2")
+    private AccountService accountService;
+
+    @Override
+    @Transactional(propagation = Propagation.REQUIRED)
+    public void save(String actno, double money) {
+        try {
+            accountService.save(actno, money);
+        } catch (Exception e) {
+            System.out.println("捕获到 Impl2 的异常: " + e.getMessage());
+        }
+        int inserted = accountDao.insert(actno, money);
+        if (inserted != 1) {
+            throw new RuntimeException("添加失败");
         }
     }
 }
