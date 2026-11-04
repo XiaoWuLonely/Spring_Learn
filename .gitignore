@@ -58,3 +58,4 @@ dist/
 # ===== 其他 =====
 *.pid
 *.seed
+AGENTS.md
