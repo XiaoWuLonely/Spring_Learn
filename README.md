@@ -1,11 +1,12 @@
 # Java 学习训练仓库
 
-个人的 Java / Spring 学习练习仓库，按学习阶段组织代码。每个模块独立，可直接用 IDEA 打开运行。
+个人的 Java、Spring Framework 与 Spring Boot 学习练习仓库，按学习阶段组织代码。每个模块独立，可直接用 IDEA 打开运行。
 
 ## 技术栈
 
 - Java 26
 - Spring Framework 7.0.0-M9（spring-context）
+- Spring Boot 4.1.2（Spring Boot Web MVC）
 - JUnit 4.13.2
 - Log4j2 2.26.1（日志）
 - Maven（构建）
@@ -15,20 +16,22 @@
 ```
 Java/
 ├── helloJava/                                      # Java SE 基础语法练习
-└── Spring/                                         # Spring 框架训练（详见 Spring/Spring_README.md）
-    ├── Spring01_FirstIoC/                          # 第一个 Spring 程序：IoC 容器入门
-    ├── Spring02_DI_Injection/                      # 依赖注入（DI）专题
-    ├── Spring03_Scope_Factory/                     # Bean 作用域 + 工厂模式
-    ├── Spring04_instantiation/                     # Bean 实例化的四种方式
-    ├── Spring05_LifeCycle/                         # Bean 完整生命周期
-    ├── Spring06_Circular_dependency_of_beans/      # Bean 循环依赖
-    ├── Spring07_Review_the_reflex/                 # 反射机制回顾
-    ├── Spring08_Write_the_Spring/                  # 手写迷你 Spring 框架
-    ├── Spring09_IOC_Annotations/                   # Spring IoC 注解驱动开发
-    ├── Spring10_JdbcTemplate/                      # Spring JdbcTemplate 数据库操作
-    ├── Spring11_GoF/                               # 设计模式与动态代理
-    ├── Spring11_AOP/                               # Spring AOP 面向切面编程
-    └── Spring13_Infect/                            # Spring 事务管理
+├── Spring/                                         # Spring 框架训练（详见 Spring/Spring_README.md）
+│   ├── Spring01_FirstIoC/                          # 第一个 Spring 程序：IoC 容器入门
+│   ├── Spring02_DI_Injection/                      # 依赖注入（DI）专题
+│   ├── Spring03_Scope_Factory/                     # Bean 作用域 + 工厂模式
+│   ├── Spring04_instantiation/                     # Bean 实例化的四种方式
+│   ├── Spring05_LifeCycle/                         # Bean 完整生命周期
+│   ├── Spring06_Circular_dependency_of_beans/      # Bean 循环依赖
+│   ├── Spring07_Review_the_reflex/                 # 反射机制回顾
+│   ├── Spring08_Write_the_Spring/                  # 手写迷你 Spring 框架
+│   ├── Spring09_IOC_Annotations/                   # Spring IoC 注解驱动开发
+│   ├── Spring10_JdbcTemplate/                      # Spring JdbcTemplate 数据库操作
+│   ├── Spring11_GoF/                               # 设计模式与动态代理
+│   ├── Spring11_AOP/                               # Spring AOP 面向切面编程
+│   └── Spring13_Infect/                            # Spring 事务管理
+└── Spring_Boot/                                     # Spring Boot 后端练习（详见 Spring_Boot/Spring_Boot_README.md）
+    └── Sp001/                                      # Spring Boot 启动类与第一个 REST 接口
 ```
 
 ## 模块导航
@@ -37,6 +40,7 @@ Java/
 |---|---|---|
 | **helloJava** | Java SE 基础：数据类型、流程控制、面向对象、异常、常用类 | → [helloJava_README.md](helloJava/helloJava_README.md) |
 | **Spring** | Spring 框架 13 个递进模块，从 IoC 到事务管理 | → [Spring_README.md](Spring/Spring_README.md) |
+| **Spring_Boot** | Spring Boot 后端应用练习 | → [Spring_Boot_README.md](Spring_Boot/Spring_Boot_README.md) |
 |  Spring01 | IoC 容器入门 | → [Spring01_IoC容器入门_README.md](Spring/Spring01_FirstIoC/Spring01_IoC容器入门_README.md) |
 |  Spring02 | 依赖注入专题 | → [Spring02_依赖注入_README.md](Spring/Spring02_DI_Injection/Spring02_依赖注入_README.md) |
 |  Spring03 | Bean 作用域 + 工厂模式 | → [Spring03_Bean作用域与工厂模式_README.md](Spring/Spring03_Scope_Factory/Spring03_Bean作用域与工厂模式_README.md) |
@@ -50,6 +54,7 @@ Java/
 |  Spring11 | 设计模式与动态代理 | → [Spring11_设计模式与动态代理_README.md](Spring/Spring11_GoF/Spring11_设计模式与动态代理_README.md) |
 |  Spring11-AOP | Spring AOP 面向切面编程 | → [Spring11_AOP_面向切面编程_README.md](Spring/Spring11_AOP/Spring11_AOP_面向切面编程_README.md) |
 |  Spring13 | Spring 事务管理 | → [Spring13_事务管理_README.md](Spring/Spring13_Infect/Spring13_Infect_事务管理_README.md) |
+|  Sp001 | Spring Boot 应用启动与 GET `/sayhi` 接口 | → [Sp001_README.md](Spring_Boot/Sp001/Sp001_README.md) |
 
 ## 学习路线
 
@@ -59,6 +64,10 @@ helloJava（Java SE 基础）
 Spring01（IoC 容器）→ Spring02（DI 注入）→ Spring03（作用域 + 工厂）
     ↓                                         ↓
 Spring04（实例化方式）→ Spring05（生命周期）→ Spring06（循环依赖）→ Spring07（反射机制）→ Spring08（手写Spring）→ Spring09（IoC注解）→ Spring10（JdbcTemplate）→ Spring11（设计模式）→ Spring11-AOP（面向切面）→ Spring13（事务管理）
+
+Spring Boot 学习路线
+    ↓
+Sp001（Spring Boot 启动类与第一个 REST 接口）
 ```
 
 ## 如何运行
