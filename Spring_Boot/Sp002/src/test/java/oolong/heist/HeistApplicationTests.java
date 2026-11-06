@@ -1,6 +1,7 @@
 package oolong.heist;
 
 import oolong.heist.bean.User;
+import oolong.heist.config.AppConfig;
 import oolong.heist.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,14 @@ class HeistApplicationTests {
 	void contextLoads() {
 		User user = userService.getUser();
 		System.out.println(user);
+	}
+
+	@Autowired
+	private AppConfig appConfig;
+
+	@Test
+	void test01(){
+		appConfig.printInfo();
 	}
 
 }
