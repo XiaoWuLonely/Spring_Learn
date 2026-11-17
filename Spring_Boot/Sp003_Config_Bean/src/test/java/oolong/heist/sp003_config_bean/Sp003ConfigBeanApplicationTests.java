@@ -1,5 +1,6 @@
 package oolong.heist.sp003_config_bean;
 
+import oolong.heist.sp003_config_bean.bean.AppBean;
 import oolong.heist.sp003_config_bean.bean.User;
 import oolong.heist.sp003_config_bean.config.AppConfig;
 import org.junit.jupiter.api.Test;
@@ -24,6 +25,16 @@ class Sp003ConfigBeanApplicationTests {
     @Test
     void test2() {
         System.out.println(user.toString());
+    }
+
+
+    //003#bean\AppBean
+    @Autowired
+    private AppBean appBean;
+
+    @Test
+    void test3() {
+        System.out.println(appBean.toString());
     }
 
 }
