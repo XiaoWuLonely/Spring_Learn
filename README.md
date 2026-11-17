@@ -31,7 +31,8 @@ Java/
 │   ├── Spring11_AOP/                               # Spring AOP 面向切面编程
 │   └── Spring13_Infect/                            # Spring 事务管理
 └── Spring_Boot/                                     # Spring Boot 后端练习（详见 Spring_Boot/Spring_Boot_README.md）
-    └── Sp001/                                      # Spring Boot 启动类与第一个 REST 接口
+    ├── Sp001_REST_API/                             # Spring Boot 启动类与第一个 REST 接口
+    └── Sp002_Bean_DI/                              # Spring Bean 管理与依赖注入
 ```
 
 ## 模块导航
@@ -54,7 +55,8 @@ Java/
 |  Spring11 | 设计模式与动态代理 | → [Spring11_设计模式与动态代理_README.md](Spring/Spring11_GoF/Spring11_设计模式与动态代理_README.md) |
 |  Spring11-AOP | Spring AOP 面向切面编程 | → [Spring11_AOP_面向切面编程_README.md](Spring/Spring11_AOP/Spring11_AOP_面向切面编程_README.md) |
 |  Spring13 | Spring 事务管理 | → [Spring13_事务管理_README.md](Spring/Spring13_Infect/Spring13_Infect_事务管理_README.md) |
-|  Sp001 | Spring Boot 应用启动与 GET `/sayhi` 接口 | → [Sp001_README.md](Spring_Boot/Sp001/Sp001_README.md) |
+|  Sp001_REST_API | Spring Boot 应用启动与 GET `/sayhi` 接口 | → [Spring_Boot_README.md](Spring_Boot/Spring_Boot_README.md) |
+|  Sp002_Bean_DI | Spring Bean 管理、依赖注入与 `@Value` 配置读取 | → [Spring_Boot_README.md](Spring_Boot/Spring_Boot_README.md) |
 
 ## 学习路线
 
@@ -67,7 +69,9 @@ Spring04（实例化方式）→ Spring05（生命周期）→ Spring06（循环
 
 Spring Boot 学习路线
     ↓
-Sp001（Spring Boot 启动类与第一个 REST 接口）
+Sp001_REST_API（启动类与第一个 REST 接口）
+    ↓
+Sp002_Bean_DI（Spring Bean 管理与依赖注入）
 ```
 
 ## 如何运行
