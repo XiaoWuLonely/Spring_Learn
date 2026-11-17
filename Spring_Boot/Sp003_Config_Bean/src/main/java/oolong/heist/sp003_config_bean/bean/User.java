@@ -1,11 +1,12 @@
 package oolong.heist.sp003_config_bean.bean;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component //第一种
+//@Configuration //第二种
 @ConfigurationProperties(prefix = "app.xyz")
-//@ConfigurationProperties(prefix = "" )
 public class User {
     private String name;
     private MyAddress myAddress;
